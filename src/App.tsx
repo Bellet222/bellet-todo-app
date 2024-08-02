@@ -24,15 +24,14 @@ function App() {
     onCancelCreateSubTask,
     onCreateSubTask,
     toggleTriggerUpdateTask,
-    handleProModeChange,
   } = useAppIndex();
 
   return (
     <main className={clsx("container mx-auto space-y-16 py-20 px-8 lg:px-64")}>
       <header className="space-y-2">
-        <h1 className="text-5xl text-center">Todo.dev</h1>
+        <h1 className="text-5xl text-center">Bellet-ToDo</h1>
 
-        <form className="flex justify-center">
+        {/* <form className="flex justify-center">
           <label className="cursor-pointer label flex gap-2 items-center">
             <span className="label-text">Pro Mode</span>
             <input
@@ -42,20 +41,19 @@ function App() {
               onChange={handleProModeChange}
             />
           </label>
-        </form>
+        </form> */}
       </header>
 
       <dialog id="greetModal" className="modal">
         <div className="modal-box">
           <p className="font-bold text-lg">Todo.dev</p>
           <p className="py-4">
-            Welcome to todo.dev. This app forces you to only use keyboard for
-            managing tasks! Disable this behaviour by clicking the "Pro Mode"
-            radio button
+            Добро пожаловать в моё приложение. Оно создано за счет личной любви к фронтенду, а так же для работодателей которые будут
+            смотреть на эту работу при моём трудоустройстве. Приятного использования!
           </p>
           <div className="modal-action">
             <form method="dialog">
-              <button className="btn">Got It</button>
+              <button className="btn">Вперёд!</button>
             </form>
           </div>
         </div>
@@ -83,7 +81,7 @@ function App() {
               id="newTitle"
               type="text"
               className="grow"
-              placeholder="Create New Task"
+              placeholder="Создать новую задачу"
               {...formCreate.register("newTitle", {
                 required: true,
                 onBlur: () => {
@@ -114,7 +112,7 @@ function App() {
               id="searchTitle"
               type="text"
               className="grow"
-              placeholder="Search Task"
+              placeholder="Найти"
               defaultValue={activeSearchQuery ?? ""}
               {...formSearch.register("searchQuery")}
             />

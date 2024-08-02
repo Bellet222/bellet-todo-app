@@ -14,29 +14,29 @@ const useAppIndex = () => {
       tasks: [
         {
           id: uuidv4(),
-          title: "Todo.dev",
+          title: "Задача 1",
           status: TaskStatus.NOT_DONE,
           subTasks: [
             {
               id: uuidv4(),
-              title: "child task",
+              title: "Подзадача 1",
               status: TaskStatus.NOT_DONE,
             },
             {
               id: uuidv4(),
-              title: "keyboard accessibility",
+              title: "Подзадача 2",
               status: TaskStatus.NOT_DONE,
             },
             {
               id: uuidv4(),
-              title: "command pallete",
+              title: "Подзадача 3",
               status: TaskStatus.NOT_DONE,
             },
           ],
         },
         {
           id: uuidv4(),
-          title: "think 5k project",
+          title: "Принять кандидата на вакансию",
           status: TaskStatus.NOT_DONE,
         },
       ],
@@ -245,7 +245,7 @@ const useAppIndex = () => {
     activeSearchQuery,
     parentTaskIdForCreate: pageState.parentTaskIdForCreate,
     displayedTasks,
-    isProMode: pageState.proMode === "enabled",
+    isProMode: pageState.proMode === "disabled",
   };
 };
 
